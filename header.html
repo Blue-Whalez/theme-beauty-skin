@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+        }
+
+        html:focus-within {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --content-width: 1170px;
+            --px: 20px;
+            --main-color: #ff4c4c;
+            --text-color: #2e3440;
+            --btn-bg: #ff4c4c;
+            --btn-txt: #fff;
+	        --btn-hover: #0099e5;
+            --space-5: 48px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        dl,
+        dd,
+        details,
+        blockquote,
+        pre,
+        figure,
+        table,
+        address,
+        hr,
+        fieldset,
+        iframe,
+        audio,
+        video {
+            margin: 0 0 1.5rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.25;
+            margin-top: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+
+        h5 {
+            font-size: .875rem;
+        }
+
+        h6 {
+            font-size: .75rem;
+        }
+
+        a {
+            color: var(--b-link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--main-color);
+        }
+
+        .main-text {
+            color: var(--main-color);
+        }
+
+        .btn {
+            padding: 14px 20px;
+            background-color: var(--btn-bg);
+            color: var(--btn-txt);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--btn-hover);
+            color: var(--btn-txt);
+        }
+        .mt-5 {
+            margin-top: var(--space-5);
+        }
+        .section {
+            margin: 0 auto;
+        }
+
+        .row {
+            width: 100%;
+            max-width: var(--content-width)!important;
+            padding-left: var(--px);
+            padding-right: var(--px);
+            margin: 0 auto!important;
+            display: flex;
+            height: 100%;
+        }
+        .col {
+            height: 100%;
+        }
+        .large-6 {
+            max-width: 50%;
+            flex-basis: 50%;
+        }
+        /* Site Header */
+        .site-header {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #fff;
+        }
+        .site-header.header--sticky {
+            position: sticky;
+            top: 0;
+        }
+        .site_header__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-branding .logo-text {
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .site-header__right {
+            display: flex;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            display:  flex;
+            justify-content:  center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.navbar li.menu-item a {
+            padding: 9px 14px;
+            font-size: 17px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+
+        @media (min-width: 768px) {
+            .site-search, .site-mode, .menu-bar {
+                display: none;
+            }
+        }
+        .hero {
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .buttons-banner {
+            height: 100%;
+            display: flex;
+        }
+        .buttons-banner .btn:not(:last-child) {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header header--sticky">
+        <section class="row site_header__row ">
+            <div class="site-header__left">
+                <div class="site-branding">
+                    <a href="#" class="logo-text">Beauty Skin</a>
+                </div>
+            </div>
+            <div class="site-header__right ">
+                <div class="site-search">Search</div>
+                <div class="site-mode">Mode</div>
+                <div class="site-navigation menu-overlay">
+                    <div class="menu-bar">=</div>
+                    <div class="menu-primary-menu-container site-menu">
+                        <ul id="menu-primary-menu" class="navbar">
+                            <li id="menu-item-26"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-26">
+                                <a href="http://hocwp.local" aria-current="page">Home</a></li>
+                            <li id="menu-item-25"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a
+                                    href="http://hocwp.local/?page_id=16">About</a></li>
+                            <li id="menu-item-27"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a
+                                    href="http://hocwp.local/?page_id=18">Services</a></li>
+                            <li id="menu-item-28"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a
+                                    href="http://hocwp.local/?page_id=19">Blog</a></li>
+                            <li id="menu-item-29"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a
+                                    href="http://hocwp.local/?page_id=20">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="hero" style="background-image: url(https://wp.w3layouts.com/beauty-skin/wp-content/themes/beauty-skin/assets/images/banner.png);">
+            <div class="row">
+                <div class="col large-6">
+                    <h1>WELCOME TO <br> BEAUTY <span class="main-text">SKIN</span> </h1>
+            <div>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
+            </div>
+            <div class="buttons-banner mt-5">
+                <a class="btn">Reserver now</a> <a class="btn">Play Video</a>
+            </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
