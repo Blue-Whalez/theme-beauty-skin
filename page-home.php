@@ -4,13 +4,13 @@
     <section class="hero" <?php 
     $hero_image = get_field('hero_image');
     if( $hero_image ) {
-      echo "style='background-image:url(" .esc_url($hero_image['url']) . "'";
+      echo "style='background-image:url(" . esc_url($hero_image['url']) . "'";
 
     }
     ?>>
       <div class="row">
           <div class="col large-6">
-            <h1><?php the_field('hero_title'); ?></h1>
+            <h1 class="hero__heading"><?php the_field('hero_title'); ?></h1>
             <?php 
               $hero_description = get_field('hero_description');
               if( $hero_description ) {
@@ -30,7 +30,7 @@
                     <?php 
                       if($text_primary_button && $link_primary_button) {
                         ?>
-                        <a class="btn" href="<?php echo esc_url($link_primary_button); ?>"><?php echo esc_html($text_primary_button)?></a> 
+                        <a class="btn btn-style" href="<?php echo esc_url($link_primary_button); ?>"><?php echo esc_html($text_primary_button)?></a> 
                         <?php
                       }
                       if( $text_play_button && $source_link_video ) {

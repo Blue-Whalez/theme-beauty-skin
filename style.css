@@ -31,6 +31,8 @@ html:focus-within {
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 h1,
@@ -92,6 +94,11 @@ h6 {
     font-size: .75rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+
 a {
     color: var(--b-link);
     text-decoration: none;
@@ -101,20 +108,38 @@ a:hover {
     color: var(--main-color);
 }
 
+/* Helper */
+.text-uppercase {
+    text-transform: uppercase;
+}
 .main-text {
     color: var(--main-color);
 }
 
 .btn {
     padding: 14px 20px;
-    background-color: var(--btn-bg);
-    color: var(--btn-txt);
+    
     cursor: pointer;
 }
 
-.btn:hover {
+
+.btn-style {
+    background-color: var(--btn-bg);
+    color: var(--btn-txt);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .25s ease-in-out;
+}
+
+.btn-style:hover {
     background-color: var(--btn-hover);
     color: var(--btn-txt);
+}
+
+hr.small-divider {
+    max-width: 60px;
+    border-color: var(--main-color);
+    margin-bottom: 0.2em;
 }
 .mt-5 {
     margin-top: var(--space-5);
@@ -144,6 +169,9 @@ a:hover {
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: #fff;
+}
+.site-header.header--transparent {
+    margin-top: -81px;
 }
 .site-header.header--sticky {
     position: sticky;
@@ -196,6 +224,13 @@ ul.navbar li.menu-item a {
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+
+.hero .hero__heading {
+   font-size: 40px; 
+}
+.hero__heading  .hero--strong {
+    font-size: 50px;
 }
 .buttons-banner {
     height: 100%;
