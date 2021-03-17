@@ -30,12 +30,12 @@
                     <?php 
                       if($text_primary_button && $link_primary_button) {
                         ?>
-                        <a class="btn btn-style" href="<?php echo esc_url($link_primary_button); ?>"><i class="fa fa-play-circle" aria-hidden="true"></i> <?php echo esc_html($text_primary_button)?></a> 
+                        <a class="btn btn-style" href="<?php echo esc_url($link_primary_button); ?>"> <?php echo esc_html($text_primary_button)?></a> 
                         <?php
                       }
                       if( $text_play_button && $source_link_video ) {
                         ?>
-                        <a class="btn btn-play" href="<?php echo esc_url($source_link_video); ?>"><i class="fa fa-play-circle" aria-hidden="true"></i> <?php echo esc_html($text_play_button)?></a> 
+                        <a class="btn btn-play" id="openModalBox" href="#"><i class="fa fa-play-circle" aria-hidden="true"></i> <?php echo esc_html($text_play_button)?></a> 
                         <?php
                       }
                     ?>
@@ -46,6 +46,15 @@
           </div>
         </div>
     </section>
+    <div class="modal" id="modalBox">
+      <div class="modal__content">
+        <span class="modal__close" id="closeModalBox">&times;</span>
+        <?php echo do_shortcode('[video src="' . esc_url($source_link_video) . '" width="640" heigh="260"]'); ?>         
+      </div>
+    </div>
 </main>
 
+<script>
+
+</script>
 <?php get_footer(); ?>
