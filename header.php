@@ -19,10 +19,10 @@
                 </div>
             </div>
             <div class="site-header__right ">
-                <div class="site-search">Search</div>
-                <div class="site-mode">Mode</div>
+                <div class="site-search"><span class="fa fa-search" aria-hidden="true"></span></div>
+                <!-- <div class="site-mode">Mode</div> -->
                 <div class="site-navigation menu-overlay">
-                    <div class="menu-bar">=</div>
+                    <div class="menu-bar"><span class="fa fa-bars" aria-hidden="true"></span></div>
                     <?php 
                     wp_nav_menu(
                         array(
