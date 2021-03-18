@@ -20,6 +20,23 @@ function handleModalBox() {
     
 }
 
+function handleMobileMenu() {
+    let toogleMenuMobile = document.getElementById('toogle-menu-mobile');
+    let siteNavigation = document.getElementById('site-navigation');
+    if ( toogleMenuMobile && siteNavigation) {
+        toogleMenuMobile.addEventListener('click', function() {
+            let isActive = siteNavigation.classList.contains('open-menu');
+            if(!isActive) {
+                siteNavigation.classList.add('open-menu');
+            } else {
+                siteNavigation.classList.remove('open-menu');
+            }
+
+        })
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
     handleModalBox();
+    handleMobileMenu();
 });
