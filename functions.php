@@ -24,7 +24,11 @@ if( ! function_exists('m2t_theme_setup') ) {
                 'menu-1' => esc_html__('Primary Menu', 'm2t'),
                 'menu-2' => esc_html__('Secondary Menu', 'm2t')
             )
-            );
+        );
+
+        // Classic Editor
+        add_filter( 'use_block_editor_for_post', '__return_false' );
+
     }
 }
 

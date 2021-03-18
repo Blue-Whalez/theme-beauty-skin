@@ -1,6 +1,7 @@
 <?php /* Template Name: Home Template */ ?>
 <?php get_header(); ?>
 <main>
+    <!-- Hero -->
     <section class="hero" <?php 
     $hero_image = get_field('hero_image');
     if( $hero_image ) {
@@ -49,9 +50,10 @@
     <div class="modal" id="modalBox">
       <div class="modal__content">
         <span class="modal__close" id="closeModalBox">&times;</span>
-        <?php echo do_shortcode('[video src="' . esc_url($source_link_video) . '" width="640" heigh="260"]'); ?>         
+        <?php echo $source_link_video; ?>         
       </div>
     </div>
+    <!--  -->
 </main>
 
 <script>
