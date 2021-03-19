@@ -112,6 +112,9 @@ a:hover {
 .text-uppercase {
     text-transform: uppercase;
 }
+.text-center {
+    text-align: center;
+}
 .main-text {
     color: var(--main-color);
 }

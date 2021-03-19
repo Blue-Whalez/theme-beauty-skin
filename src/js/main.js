@@ -36,7 +36,25 @@ function handleMobileMenu() {
     }
 }
 
+function handleSlider() {
+    var slider = tns({
+        container: '.my-slider',
+        items: 3,
+        nav: false,
+        mode: 'carousel',
+        mouseDrag: true,
+        speed: 500,
+        autoplayButtonOutput: false,
+        autoPlayTimeout: 3500,
+        swipeAngle: false,
+        controls: false,
+        autoplay: true,
+        autoWidth: true,
+        mouseDrag: true });
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
     handleModalBox();
     handleMobileMenu();
+    handleSlider();
 });

@@ -53,10 +53,25 @@
         <?php echo $source_link_video; ?>         
       </div>
     </div>
-    <!--  -->
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="row">
+          <div class="col text-center">
+          <p class="sub-heading">UT ENIM AD MINIM VENIAM, QUIS NOSTRUD</p>
+          <h2>We have the best Services</h2>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <a class="btn btn-style">Let's get started!</a>
+          </div>
+        </div>
+        <div class="my-slider">
+          <div><img src="https://wp.w3layouts.com/beauty-skin/wp-content/themes/beauty-skin/assets/images/img1.jpg" alt=""></div>
+          <div><img src="https://wp.w3layouts.com/beauty-skin/wp-content/themes/beauty-skin/assets/images/img2.jpg" alt=""></div>
+          <div><img src="https://wp.w3layouts.com/beauty-skin/wp-content/themes/beauty-skin/assets/images/img3.jpg" alt=""></div>
+          <div><img src="https://wp.w3layouts.com/beauty-skin/wp-content/themes/beauty-skin/assets/images/img4.jpg" alt=""></div>
+          <div><img src="https://wp.w3layouts.com/beauty-skin/wp-content/themes/beauty-skin/assets/images/img5.jpg" alt=""></div>
+          <div><img src="https://wp.w3layouts.com/beauty-skin/wp-content/themes/beauty-skin/assets/images/img6.jpg" alt=""></div>
+        </div>
+    </section>         
 </main>
 
-<script>
-
-</script>
 <?php get_footer(); ?>
