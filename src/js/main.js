@@ -46,11 +46,15 @@ function handleSlider() {
         speed: 500,
         autoplayButtonOutput: false,
         autoPlayTimeout: 3500,
-        swipeAngle: false,
+        swipeAngle: 10,
         controls: false,
         autoplay: true,
+        arrowKeys: true,
         autoWidth: true,
-        mouseDrag: true });
+        mouseDrag: true,
+        preventScrollOnTouch: "force",
+        autoplayHoverPause: true,
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
