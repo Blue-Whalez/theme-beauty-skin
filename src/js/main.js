@@ -45,7 +45,7 @@ function handleSlider() {
         mouseDrag: true,
         speed: 500,
         autoplayButtonOutput: false,
-        autoPlayTimeout: 3500,
+        autoPlayTimeout: 4500,
         swipeAngle: 10,
         controls: false,
         autoplay: true,
