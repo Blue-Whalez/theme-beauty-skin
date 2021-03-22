@@ -73,8 +73,8 @@
                 <p class="m-0"><?php echo $cta_section['description']; ?></p>
               <?php endif; ?>
 
-              <?php if( $cta_section['heading'] ) : ?>
-                <a class="btn btn-style mt-5"><?php echo $cta_section['heading']; ?></a>
+              <?php if( $cta_section['text_button'] ) : ?>
+                <a class="btn btn-style mt-5" href="<?php echo esc_url($cta_section['link_button'])?>"><?php echo $cta_section['text_button']; ?></a>
               <?php endif; ?>
 
             </div>
