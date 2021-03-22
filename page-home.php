@@ -83,7 +83,7 @@
           <?php 
           $images = $cta_section['gallery'];
           if( $images ): ?>
-              <div  class="my-slider">
+              <div  class="main-carousel">
                   <?php foreach( $images as $image ): ?>
                       <div>
                               <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />

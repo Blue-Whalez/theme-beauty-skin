@@ -37,23 +37,16 @@ function handleMobileMenu() {
 }
 
 function handleSlider() {
-    var slider = tns({
-        container: '.my-slider',
-        items: 3,
-        nav: false,
-        mode: 'carousel',
-        mouseDrag: true,
-        speed: 500,
-        autoplayButtonOutput: false,
-        autoPlayTimeout: 4500,
-        swipeAngle: 10,
-        controls: false,
-        autoplay: true,
-        arrowKeys: true,
-        autoWidth: true,
-        mouseDrag: true,
-        preventScrollOnTouch: "force",
-        autoplayHoverPause: true,
+    var elem = document.querySelector('.main-carousel');
+    var flkty = new Flickity( elem, {
+    // options
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false,
+    wrapAround: true,
+    autoPlay: 2500,
+
+    pauseAutoPlayOnHover: false
     });
 }
 
