@@ -8,6 +8,7 @@ get_header(); ?>
 <main>
 
 	<?php 
+	
 	if ( have_posts() ) :
 		
 		while( have_posts() ) : the_post();
@@ -16,9 +17,13 @@ get_header(); ?>
 
 			get_template_part('template-parts/cta');
 
+			get_template_part('template-parts/what-we-do');
+
 		endwhile;
 
-	endif; ?>
+	endif; 
+	
+	?>
 
 </main>
 
