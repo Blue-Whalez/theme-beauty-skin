@@ -1,5 +1,5 @@
 <?php
-
+// Set up
 function add_theme_script() {
     wp_enqueue_style( 'font-awesome-style', get_template_directory_uri().'/src/fonts/font-awesome/css/font-awesome.min.css', );    
     wp_enqueue_style('style', get_stylesheet_uri(), array('vendor'), '1.0', 'all');
@@ -36,3 +36,8 @@ if( ! function_exists('m2t_theme_setup') ) {
 }
 
 add_action('after_setup_theme','m2_theme_setup');
+
+/**
+ * Custom Post Type: service, our-team, testimonial
+ */
+require get_template_directory() . '/inc/custom-post-type.php';
