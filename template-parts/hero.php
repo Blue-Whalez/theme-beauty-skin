@@ -60,7 +60,7 @@
 
                             <?php if($text_primary_button && $link_primary_button) : ?> 
                             
-                                <a class="btn btn-style" href="<?php echo esc_url($link_primary_button); ?>"> 
+                                <a class="btn btn-style btn--large " href="<?php echo esc_url($link_primary_button); ?>"> 
 
                                     <?php echo esc_html($text_primary_button)?>
 
@@ -71,7 +71,7 @@
 
                             <?php if( $text_play_button && $source_link_video ) : ?>
 
-                                <a class="btn btn-play" id="openModalBox" href="#">
+                                <a class="btn btn-play btn--large " id="openModalBox" href="#">
 
                                     <i class="fa fa-play-circle" aria-hidden="true"></i> <?php echo esc_html($text_play_button)?>
 

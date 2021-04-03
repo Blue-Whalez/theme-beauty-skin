@@ -17,7 +17,7 @@ get_header(); ?>
 
 			get_template_part('template-parts/cta');
 
-			get_template_part('template-parts/what-we-do');
+			get_template_part('template-parts/service');
 
 		endwhile;
 

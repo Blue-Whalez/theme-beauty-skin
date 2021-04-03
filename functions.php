@@ -41,3 +41,7 @@ add_action('after_setup_theme','m2_theme_setup');
  * Custom Post Type: service, our-team, testimonial
  */
 require get_template_directory() . '/inc/custom-post-type.php';
+
+require get_template_directory() . '/inc/helpers.php';
+
+

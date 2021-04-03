@@ -34,7 +34,7 @@ if( $cta_section ): ?>
 
                 <?php if( $cta_section['text_button'] ) : ?>
 
-                    <a class="btn btn-style mt-5" href="<?php echo esc_url($cta_section['link_button'])?>">
+                    <a class="btn btn-style btn--large mt-5" href="<?php echo esc_url($cta_section['link_button'])?>">
                         <?php echo $cta_section['text_button']; ?>
                     </a>
 
