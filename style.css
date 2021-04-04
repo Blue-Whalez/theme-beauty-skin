@@ -262,6 +262,7 @@ hr.small-divider {
 .site-header.header--sticky {
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 body.admin-bar .site-header.header--sticky {
     top: 32px;
