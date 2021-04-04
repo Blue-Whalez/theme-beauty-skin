@@ -22,6 +22,7 @@ html:focus-within {
     --content-width: 1170px;
     --px: 20px;
     --main-color: #ff4c4c;
+    --second-color: #0099e5;
     --bg-color: #fff;
     --border-color-light: #eee;
     --heading-color: #060606;
@@ -89,7 +90,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 2.3rem;
 }
 
 h4 {
@@ -198,6 +199,7 @@ p:last-child {
     justify-content: center;
     align-items: center;
 }
+
 
 hr.small-divider {
     max-width: 60px;
@@ -477,4 +479,60 @@ ul.navbar li.menu-item a {
 .card-hover--style-1:hover {
     box-shadow: 0px 17px 26px -16px rgb(0 0 0 / 41%);
     border-color: transparent;
+}
+
+/* Testimonial */
+.bg-overlay {
+    position: relative;
+}
+.bg-overlay:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    background: rgb(0 0 0 / 39%);
+}
+
+.testimonials.bg-overlay, .testimonials.bg-overlay .heading-2 {
+    color: #fff;
+}
+.card-testimonial {
+    padding: 24px;
+    border-radius: 5px;
+}
+.customer__review {
+    color: var(--text-color);
+    margin: 0;
+}
+
+.customer__review q:before {
+    font-size: 50px;
+    color: var(--second-color);
+    font-family: initial;
+    line-height: .8;
+    padding-top: 8px;
+    display: inline-block;
+}
+
+.customer__info {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+.customer__avatar img {
+    border-radius: 50%;
+}
+.customer__avatar {
+    margin-right: 12px;
+}
+.customer__name {
+    margin: 0%;
+}
+.customer__job {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 4px;
 }
