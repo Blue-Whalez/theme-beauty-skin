@@ -5,6 +5,7 @@ Author: Tuan Truong
 Author URI: https://www.facebook.com/tquoctuanit
 Description: A theme controls the presentation of content
 Version: 1.0
+Text Domain: beautyskin
 */
 
 *,
@@ -127,6 +128,17 @@ p:last-child {
     font-size: 4rem;
     margin-top: 0;
     margin-bottom: 2.4rem;
+}
+.title-style {
+    position: relative;
+}
+.title-style:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    background: var(--main-color);
+    width: 40px;
+    height: 3px;
 }
 .text-uppercase {
     text-transform: uppercase;
@@ -433,6 +445,7 @@ ul.navbar li.menu-item a {
 
 .card-image img {
     max-width: 100%;
+    height: auto;
 }
 .card-info {
     padding: 20px 0;
@@ -453,4 +466,14 @@ ul.navbar li.menu-item a {
     padding: 8px 20px;
     font-size: 14px;
     margin-top: 30px;
+}
+
+.card-hover--style-1 {
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+}
+
+.card-hover--style-1:hover {
+    box-shadow: 0px 17px 26px -16px rgb(0 0 0 / 41%);
+    border-color: transparent;
 }

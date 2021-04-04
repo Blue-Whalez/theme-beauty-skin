@@ -7,7 +7,7 @@ if ( $service_section ) :
             <div class="col text-center mb-5" style="max-width: 800px; margin: 0 auto;">
 
                 <?php if( $service_section['heading'] ) : ?>
-                    <h2 class="heading-2"><?php echo $service_section['heading']; ?></h2>
+                    <h2 class="heading-2 title-style"><?php echo $service_section['heading']; ?></h2>
                 <?php endif; ?>
 
                 <?php if( $service_section['description'] ) : ?>
