@@ -36,7 +36,13 @@ html:focus-within {
 
 html {
     font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
-  }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -246,8 +252,16 @@ hr.small-divider {
     flex-basis: 50%;
 }
 
+.large-4 {
+    max-width: 25%;
+    flex-basis: 25%;
+}
+
 @media (max-width: 768px) {
-    .large-6 {
+    .row {
+        flex-wrap: wrap;
+    }
+    .large-6, .large-4 {
         max-width: 100%;
         flex-basis: 100%;
     }
@@ -316,6 +330,7 @@ ul.navbar li.menu-item a {
 
 
 @media (max-width: 768px) {
+    
     .site-navigation {
         position: absolute;
         top: 100%;
@@ -351,6 +366,52 @@ ul.navbar li.menu-item a {
         margin-right:  20px;
     }
 }
+
+/* Footer */
+.site-footer {
+    background-color: var(--heading-color);
+    padding: 48px 0;
+    color: #fff;
+}
+
+.site-footer .social__list {
+    justify-content: flex-start;
+}
+
+.footer__logo {
+    text-align: center;
+}
+
+.footer__logo .logo-text {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.footer__copyright {
+    font-size: 16px;
+}
+
+.footer__copyright a {
+    color: var(--second-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .site-footer .social__list {
+        justify-content: center;
+    }
+    .footer__copyright {
+       text-align: center;
+    }
+    .site-footer .row > .col:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Hero */
 .hero {
     background-size: cover;
     background-position: bottom;
@@ -604,9 +665,18 @@ ul.navbar li.menu-item a {
      background-color: #fff;
      border-radius: 50%;
      color: var(--main-color);
+     transition: all .3s ease;
 }
 
 .social__link:hover {
     opacity: 0.9;
+}
+
+.social__list.dark .social__link {
+    background-color: rgb(74 74 74 / 35%);
+    color: #fff;
+}
+.social__list.dark .social__link:hover {
+    background-color: var(--main-color);
 }
 

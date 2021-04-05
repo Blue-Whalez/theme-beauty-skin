@@ -38,6 +38,9 @@ if( ! function_exists('m2t_theme_setup') ) {
                 'menu-2' => esc_html__('Secondary Menu', 'm2t')
             )
         );
+        
+        // Add widgets support
+        add_theme_support( 'widgets' );
 
         // Classic Editor
         add_filter( 'use_block_editor_for_post', '__return_false' );
@@ -54,4 +57,4 @@ require get_template_directory() . '/inc/custom-post-type.php';
 
 require get_template_directory() . '/inc/helpers.php';
 
-
+require get_template_directory() . '/inc/widgets.php';
