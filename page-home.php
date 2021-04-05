@@ -21,6 +21,8 @@ get_header(); ?>
 
 			get_template_part('template-parts/testimonials');
 
+			get_template_part('template-parts/our-team');
+
 
 		endwhile;
 

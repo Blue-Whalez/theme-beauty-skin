@@ -15,9 +15,19 @@ add_action('wp_enqueue_scripts','add_theme_script');
 
 if( ! function_exists('m2t_theme_setup') ) {
     function m2_theme_setup() {
+        
+		// Make theme available for translation.
+		load_theme_textdomain( 'beautyskin', get_template_directory() . '/languages' );
+
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
+
+        // Let WordPress manage the document title.
+        add_theme_support( 'title-tag' );
+
         // Enable support for Post Thumbnails on posts and pages.
         add_theme_support('post-thumbnails');
-
+        
         // Support Custom Logo
         add_theme_support('custom-logo');
 

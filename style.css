@@ -536,3 +536,68 @@ ul.navbar li.menu-item a {
     color: var(--text-color);
     margin-top: 4px;
 }
+
+/* Member */
+.card-member {
+    box-shadow: 0 20px 62px rgb(4 20 69 / 10%);
+}
+
+.member__detail {
+    padding: 2.4rem;
+}
+.member__avatar {
+    position: relative;
+    overflow: hidden;
+}
+
+.member__avatar img {
+    margin-bottom: -7px;
+}
+.member__social {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    transition: bottom .3s ease;
+    background: rgb(8 8 8 / 29%);
+    padding: 10px 0px;
+}
+.card-member:hover .member__social {
+    bottom: 0;
+}
+
+.member__name {
+    font-size: 2.6rem;
+    margin: 0;
+    margin-bottom: 4px;
+}
+.card-member:hover .member__name a {
+    color: var(--main-color);
+}
+
+.social__list {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+}
+
+.social__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social__link {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 30px;
+     height: 30px;
+     background-color: #fff;
+     border-radius: 50%;
+     color: var(--main-color);
+}
+
+.social__link:hover {
+    opacity: 0.9;
+}
+

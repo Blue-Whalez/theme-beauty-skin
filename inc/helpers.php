@@ -113,3 +113,102 @@ function display_lastest_testimonial() {
         echo  esc_html( 'Sorry, no posts matched your criteria.', 'beautyskin' ); 
     endif;
 }
+
+function display_lastest_members() {
+    $args = array(
+        'numberposts'      => 3,
+        'post_type'        => 'our-team'
+    );
+    $the_query = new WP_Query($args);
+    
+    if( $the_query->have_posts() ) : 
+        echo '<div class="card-third">';
+        while($the_query->have_posts()) : 
+            $the_query->the_post();
+
+            $member_name = get_the_title();
+
+            $member_avatar = get_field( 'member_avatar' );
+            $member_social = get_field( 'social_link' );
+            $member_position = get_field( 'member_position' );
+            $member_link = get_permalink();
+
+            
+            ?>
+                <article class="card card-member">
+                    <div class="membebr__info">
+
+                        <?php if ( $member_avatar ) : ?>
+
+                            <div class="card-image member__avatar">
+                                <a href="<?php echo esc_url( $member_link ); ?>">
+                                    <img src="<?php echo esc_url( $member_avatar['url'] ); ?>" alt="<?php echo esc_attr( $member_avatar['alt'] ); ?>" />
+                                </a>
+                                
+                                <?php if ( $member_social ) : ?>
+                                    <?php 
+                                         $facebook = $member_social['facebook'];
+                                         $twitter = $member_social['twitter'];
+                                         $google = $member_social['google'];    
+                                    ?>
+
+                                    <div class="member__social">
+                                        <ul class="social__list light">
+
+                                            <?php if ( $facebook ) : ?>
+                                                <li class="social__item">
+                                                    <a class="social__link" href="<?php echo esc_url($facebook); ?>">
+                                                        <span class="fa fa-facebook"></span>
+                                                    </a>
+                                                </li>
+                                            <?php endif; ?>
+
+                                            <?php if ( $twitter ) : ?>
+                                                <li class="social__item">
+                                                    <a class="social__link" href="<?php echo esc_url($twitter); ?>">
+                                                        <span class="fa fa-twitter"></span>
+                                                    </a>
+                                                </li>
+                                            <?php endif; ?>
+
+                                            <?php if ( $google ) : ?>
+                                                <li class="social__item">
+                                                    <a class="social__link" href="<?php echo esc_url($google); ?>">
+                                                        <span class="fa fa-google"></span>
+                                                    </a>
+                                                </li>
+                                            <?php endif; ?>
+
+                                        </ul>
+                                    </div>
+
+                                <?php endif; ?>
+
+                            </div>
+
+                        <?php endif; ?>
+
+                        <div class="member__detail">
+                            <?php if( $member_name ): ?>
+                                <h3 class="member__name">
+                                    <a href="<?php echo esc_url( $member_link ); ?>">
+                                        <?php echo esc_html( $member_name ); ?> 
+                                    </a>
+                                </h3>
+                            <?php endif; ?>
+
+                            <?php if ( $member_position ) : ?>
+                                <p class="member__position"><?php echo esc_html( $member_position ); ?></p>
+                            <?php endif; ?>
+                        </div>
+                        
+                    </div>
+                </article>
+            <?php
+        endwhile;
+        echo '</div>';
+        wp_reset_postdata();
+    else:
+        echo  esc_html( 'Sorry, no posts matched your criteria.', 'beautyskin' ); 
+    endif;
+}
