@@ -50,21 +50,26 @@ function handleSlider() {
     });
 }
 
-function handleScrollToTop() {
+function handleScroll() {
+    let btnBackToTop = document.getElementById("movetop");
+    let siteHeader = document.getElementsByClassName("site-header")[0];
      // When the user scrolls down 20px from the top of the document, show the button
-     window.onscroll = function () {
-        scrollFunction()
+    window.onscroll = function () {
+        handleScrollFunction(btnBackToTop, siteHeader);
     };
 
-    function scrollFunction() {
+    function handleScrollFunction(btnBackToTop, siteHeader) {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("movetop").style.display = "block";
+            btnBackToTop.style.display = "block";
+            siteHeader.classList.add('header--effect');
+            
         } else {
-            document.getElementById("movetop").style.display = "none";
+            btnBackToTop.style.display = "none";
+            siteHeader.classList.remove('header--effect');
         }
     }
 
-    document.getElementById("movetop").addEventListener('click', function() {
+    btnBackToTop.addEventListener('click', function() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     });
@@ -74,5 +79,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
     handleModalBox();
     handleMobileMenu();
     handleSlider();
-    handleScrollToTop();
+    handleScroll();
 });

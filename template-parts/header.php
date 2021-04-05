@@ -1,17 +1,12 @@
 <header class="site-header header--transparent header--sticky">
     
     <section class="row site_header__row ">
-
         <div class="site-header__left">
 
             <div class="site-branding">
-                
-                <a href="<?php echo site_url(); ?>" class="logo-text">
-                    <?php echo bloginfo('name'); ?>
-                </a>
-                
+                <?php display_site_branding(); ?>
             </div>
-
+            
         </div>
 
         <div class="site-header__right">

@@ -266,6 +266,9 @@ hr.small-divider {
     top: 0;
     z-index: 100;
 }
+.site-header.header--effect {
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 5%);
+}
 body.admin-bar .site-header.header--sticky {
     top: 32px;
 }
@@ -280,6 +283,12 @@ body.admin-bar .site-header.header--sticky {
     font-weight: 500;
     color: var(--heading-color);
 }
+
+.site-branding .logo {
+    max-height: 60px;
+    width: auto;
+}
+
 
 .site-header__right {
     display: flex;
