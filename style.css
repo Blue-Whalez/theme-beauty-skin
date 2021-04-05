@@ -253,8 +253,8 @@ hr.small-divider {
 }
 
 .large-4 {
-    max-width: 25%;
-    flex-basis: 25%;
+    max-width: 33.33%;
+    flex-basis: 33.33%;
 }
 
 @media (max-width: 768px) {
