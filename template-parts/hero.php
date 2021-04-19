@@ -30,7 +30,7 @@
 <section class="hero py" id="hero" >
     <div class="row">
         <div class="col large-6">
-
+            
             <?php if ( $hero_title ) : ?>
                 <h1 class="hero__heading"><?php echo $hero_title; ?></h1>
             <?php endif; ?>

@@ -1,6 +1,5 @@
 
 <?php get_header(); ?>
-
 <main class="row">
         <?php 
             while(have_posts()) {

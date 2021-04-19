@@ -1,19 +1,24 @@
 <?php
-// Set up
-function add_theme_script() {
-    wp_enqueue_style( 'font-awesome-style', get_template_directory_uri().'/src/fonts/font-awesome/css/font-awesome.min.css', );    
-    wp_enqueue_style('style', get_stylesheet_uri(), array('vendor'), '1.0', 'all');
-    wp_enqueue_script('script', get_template_directory_uri() . '/src/js/main.js', array('vendor'), '1.0', true);
-    
-    wp_enqueue_style('vendor', get_template_directory_uri() . '/src/css/vendor.css', array(), '1.0', 'all');
-    wp_enqueue_script('vendor', get_template_directory_uri() . '/src/js/vendor.js', array(), '1.0', true);
-    
-}
 
-add_action('wp_enqueue_scripts','add_theme_script');
+function beautyskin_files() {
 
+    if (strstr($_SERVER['SERVER_NAME'], 'hocwp1.local')) {
+      wp_enqueue_style( 'font-awesome-style', get_template_directory_uri().'/src/fonts/font-awesome/css/font-awesome.min.css', );    
+      wp_enqueue_script('main-js', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
+    } else {
+      wp_enqueue_style( 'font-awesome-style', get_template_directory_uri().'/src/fonts/font-awesome/css/font-awesome.min.css', );    
+      wp_enqueue_script('vendors-js', get_theme_file_uri('/dist/vendors~scripts.3f506ba6b128de71c108.js'), NULL, '1.0', true);
+      wp_enqueue_script('main-js', get_theme_file_uri('/dist/scripts.3848c357d6c642f86df9.js'), NULL, '1.0', true);
+      wp_enqueue_style('main-styles', get_theme_file_uri('/dist/styles.3848c357d6c642f86df9.css'));
+    }
 
+  }
+  
+add_action('wp_enqueue_scripts', 'beautyskin_files');
+
+// Theme Setup
 if( ! function_exists('m2t_theme_setup') ) {
+
     function m2_theme_setup() {
         
 		// Make theme available for translation.

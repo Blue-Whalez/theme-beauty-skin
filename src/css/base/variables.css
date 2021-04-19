@@ -1,0 +1,15 @@
+:root {
+    --content-width: 1170px;
+    --px: 20px;
+    --main-color: #ff4c4c;
+    --second-color: #0099e5;
+    --bg-color: #fff;
+    --border-color-light: #eee;
+    --heading-color: #060606;
+    --text-color: #707070;
+    --btn-bg: #ff4c4c;
+    --btn-txt: #fff;
+    --btn-hover: #2e3440;
+    --space-5: 48px;
+    --space-section: 96px;
+}

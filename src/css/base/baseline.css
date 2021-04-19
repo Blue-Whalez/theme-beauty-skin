@@ -1,0 +1,123 @@
+@define-mixin atSmall {
+    @media (min-width: 530px) {
+      @mixin-content;
+    }
+  }
+  
+  @define-mixin atSmallMedium {
+    @media (min-width: 767px) {
+      @mixin-content;
+    }
+  }
+  
+  @define-mixin atMedium {
+    @media (min-width: 960px) {
+      @mixin-content;
+    }
+  }
+  
+  *,
+  ::before,
+  ::after {
+      box-sizing: border-box;
+  }
+  
+  html:focus-within {
+      scroll-behavior: smooth;
+  }
+
+  html {
+    font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-size: 1.7rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+details,
+blockquote,
+pre,
+figure,
+table,
+address,
+hr,
+fieldset,
+iframe,
+audio,
+video {
+    margin: 0 0 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.25;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: .875rem;
+}
+
+h6 {
+    font-size: .75rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--heading-color);
+}
+
+
+a {
+    color: var(--b-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}

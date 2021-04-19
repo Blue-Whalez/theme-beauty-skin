@@ -1,3 +1,9 @@
+import "../css/style.css"
+
+/* 3rd party packages */
+import Flickity from 'flickity';
+
+
 function handleModalBox() {
     let modal = document.getElementById('modalBox');
     if ( modal ) {
@@ -81,3 +87,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     handleSlider();
     handleScroll();
 });
+
+// Allow new JS and CSS to load in browser without a traditional page refresh
+if (module.hot) {
+    module.hot.accept()
+  }
